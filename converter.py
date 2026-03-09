@@ -25,12 +25,11 @@ def image_to_pdf(image_file, pdf_file):
     image = Image.open(image_file)
     image.convert("RGB").save(pdf_file)
 
-
 def md_to_word(md_file, docx_file):
     pypandoc.convert_file(
         md_file,
-        "docx",
-        format="md",   
+        to="docx",
+        format="markdown",
         outputfile=docx_file
     )
 
@@ -38,6 +37,6 @@ def md_to_pdf(md_file, pdf_file):
     pypandoc.convert_file(
         md_file,
         "pdf",
-        format="md",  
+        format="markdown",  
         outputfile=pdf_file
     )
