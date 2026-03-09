@@ -4,5 +4,3 @@ docx2pdf
 pdf2image
 pillow
 pypandoc
-pandoc
-poppler-utils
