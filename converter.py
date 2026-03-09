@@ -30,7 +30,7 @@ def md_to_word(md_file, docx_file):
     pypandoc.convert_file(
         md_file,
         "docx",
-        format="md",   # 👈 important
+        format="md",   
         outputfile=docx_file
     )
 
@@ -38,6 +38,6 @@ def md_to_pdf(md_file, pdf_file):
     pypandoc.convert_file(
         md_file,
         "pdf",
-        format="md",   # 👈 important
+        format="md",  
         outputfile=pdf_file
     )
