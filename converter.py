@@ -27,18 +27,17 @@ def image_to_pdf(image_file, pdf_file):
 
 
 def md_to_word(md_file, docx_file):
-    try:
-        pypandoc.get_pandoc_path()
-    except OSError:
-        pypandoc.download_pandoc()
-
-    pypandoc.convert_file(md_file, "docx", outputfile=docx_file)
-
+    pypandoc.convert_file(
+        md_file,
+        "docx",
+        format="md",   # 👈 important
+        outputfile=docx_file
+    )
 
 def md_to_pdf(md_file, pdf_file):
-    try:
-        pypandoc.get_pandoc_path()
-    except OSError:
-        pypandoc.download_pandoc()
-
-    pypandoc.convert_file(md_file, "pdf", outputfile=pdf_file)
+    pypandoc.convert_file(
+        md_file,
+        "pdf",
+        format="md",   # 👈 important
+        outputfile=pdf_file
+    )
