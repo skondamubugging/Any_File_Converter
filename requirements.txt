@@ -1,0 +1,7 @@
+streamlit
+pdf2docx
+docx2pdf
+pdf2image
+pillow
+pypandoc
+pandoc
